@@ -230,7 +230,7 @@ public class EnumUtils {
         for (final E value : condensed) {
             result[value.ordinal() / Long.SIZE] |= 1L << (value.ordinal() % Long.SIZE);
         }
-        //ArrayUtils.reverse(result);
+        ArrayUtils.reverse(result);
         return result;
     }
 

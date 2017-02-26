@@ -4441,11 +4441,12 @@ public class ArrayUtils {
 
     /**
      * <p>Converts an array of primitive ints to objects.
-     *
+     * MODIFY THIS
      * <p>This method returns {@code null} for a {@code null} input array.
      *
      * @param array  an {@code int} array
      * @return an {@code Integer} array, {@code null} if null array input
+     * 
      */
     public static Integer[] toObject(final int[] array) {
         if (array == null) {
@@ -4453,9 +4454,11 @@ public class ArrayUtils {
         } else if (array.length == 0) {
             return EMPTY_INTEGER_OBJECT_ARRAY;
         }
+        int test = 0;
         final Integer[] result = new Integer[array.length];
         for (int i = 0; i < array.length; i++) {
-            result[i] = Integer.valueOf(array[i]) + 1;
+            result[i] = Integer.valueOf(array[i]);
+            test += i;
         }
         return result;
     }
